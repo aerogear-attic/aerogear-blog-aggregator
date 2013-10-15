@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Aggregated AeroGear Blogs</title>
+    <link>http://aerogear.org</link>
+    <description>Aggregated Feed of blogs dedicated to aerogear</description>
+    <dc:creator>aerogear</dc:creator>
+    <item>
+      <title>AeroGear Cordova</title>
+      <link>http://blog.nerdin.ch/2013/10/aerogear-cordova.html</link>
+      <thr:total xmlns:thr="http://purl.org/syndication/thread/1.0">0</thr:total>
+      <content:encoded>We support developers that want to use Cordova to develop mobile apps. We already have a lot of
+        documentation on how to get started with Cordova on our site. Now we've added some specialised plugins to start
+        using AeroGear functionality in a Cordova project.&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;The &lt;a
+        href="https://github.com/aerogear/aerogear-otp-cordova"&gt;OTP (One Time Password) Cordova plugin&lt;/a&gt; with
+        integrated barcode scanner&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;With this plugin you can make your logins much more
+        secure generate a QR code on the server and save the secret on the device and use it to generate a one time
+        password.&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;The &lt;a
+        href="https://github.com/aerogear/aerogear-pushplugin-cordova"&gt;specialised push plugin&lt;/a&gt; for easy
+        integration with Unified Push Server&lt;/li&gt;&lt;/ul&gt;The standard PushPlugin can be used with Unified Push
+        Server as well, but there is a lot of setting up to do and the API is different for Android and iOS. The whole
+        this plugin can because it's using the Unified Push server have a lot simpler unified API&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;These
+        plugins work with the Cordova CLI (plugman) so installing and using them is easy. All of them contain a example
+        directory with a minimalistic working demo.&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;Another demo Cordova project that
+        takes an exiting web front-end and creates a native application integrated with push messaging. We are thinking
+        about more things we can do to support your Cordova development and would love to get suggestions on where to
+        put our effort.&lt;br /&gt;&lt;br /&gt;Some plugins that we are thinking about are:&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Crypto
+        native storage&lt;/li&gt;&lt;li&gt;GeoTools Plugin (GeoFencing and Maps)&lt;/li&gt;&lt;li&gt;Google Wallet
+        Plugin&lt;/li&gt;&lt;li&gt;Ads Plugin (one that combines iOS and Android)&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;Currently
+        we are focusing our efforts on Android and iOS, but maybe we need to support other platforms as well. Windows
+        Phone comes to mind and maybe even Firfox OS. What platforms are you currently supporting?&lt;br /&gt;&lt;div&gt;&lt;br
+        /&gt;&lt;/div&gt;</content:encoded>
+      <category domain="http://www.blogger.com/atom/ns#">plugins</category>
+      <category domain="http://www.blogger.com/atom/ns#">cordova</category>
+      <category domain="http://www.blogger.com/atom/ns#">aerogear</category>
+      <pubDate>Thu, 10 Oct 2013 13:39:00 GMT</pubDate>
+      <author>noreply@blogger.com</author>
+      <guid isPermaLink="false">tag:blogger.com,1999:blog-236071318451058546.post-1126354836415376120</guid>
+      <dc:creator>Erik Jan de Wit</dc:creator>
+      <dc:date>2013-10-10T13:39:00Z</dc:date>
+    </item>
+    <item>
+      <title>Example entry</title>
+      <link>http://www.wikipedia.org/</link>
+      <description>Here is some text containing an interesting description.</description>
+      <pubDate>Sun, 06 Sep 2009 16:20:00 GMT</pubDate>
+      <guid isPermaLink="false">unique string per item</guid>
+      <dc:date>2009-09-06T16:20:00Z</dc:date>
+    </item>
+  </channel>
+</rss>

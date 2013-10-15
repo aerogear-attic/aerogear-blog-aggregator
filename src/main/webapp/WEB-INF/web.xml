@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+  <filter>
+    <filter-name>CORS Filter</filter-name>
+    <filter-class>org.ebaysf.web.cors.CORSFilter</filter-class>
+    <init-param>
+      <description>A comma separated list of allowed origins. Note: An '*' cannot be used for an allowed origin when
+        using credentials.
+      </description>
+      <param-name>cors.allowed.origins</param-name>
+      <param-value>http://localhost:8888,http://aerogear.org</param-value>
+    </init-param>
+    <init-param>
+      <description>A comma separated list of HTTP verbs, using which a CORS request can be made.</description>
+      <param-name>cors.allowed.methods</param-name>
+      <param-value>GET</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CORS Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
