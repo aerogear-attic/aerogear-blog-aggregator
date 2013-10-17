@@ -1,4 +1,11 @@
 [
   'http://blog.nerdin.ch/feeds/posts/default/-/aerogear',
-  'http://matthiaswessendorf.wordpress.com/tag/aerogear/feed'
+  'http://matthiaswessendorf.wordpress.com/tag/aerogear/feed',
+  'http://corinnekrych.blogspot.fr/feeds/posts/default/-/AeroGear',
+  'http://feeds.feedburner.com/gorkem-ercan/aerogear',
+  'http://blog.sagaoftherealms.net/?cat=12&feed=rss2',
+  'http://cvasilak.blogspot.ch/feeds/posts/default/-/aerogear',
+  'http://blog.passos.me/feed-aerogear.xml',
+  'http://blog.qmx.me/tag/aerogear.atom',
+  'http://blog.krisborchers.com/category/aerogear/feed/'
 ]
