@@ -36,8 +36,8 @@ public class AggregatorTest {
 
   private List<URL> getMockedList() {
     List<URL> urls = new ArrayList<URL>();
-    urls.add(getClass().getResource("/blog1.xml"));
     urls.add(getClass().getResource("/blog2.xml"));
+    urls.add(getClass().getResource("/blog1.xml"));
     return urls;
   }
 }
