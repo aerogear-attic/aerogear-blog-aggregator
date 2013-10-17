@@ -19,6 +19,8 @@ public class AggregatorServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     Aggregator aggregator = new Aggregator(new Feeds());
 
+    response.setContentType("application/xml; charset=utf-8");
+
     PrintWriter writer = null;
     try {
       writer = response.getWriter();
