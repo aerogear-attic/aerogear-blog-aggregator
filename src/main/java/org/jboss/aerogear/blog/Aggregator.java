@@ -57,8 +57,10 @@ public class Aggregator {
   private class OrderByDate implements Comparator<SyndEntry> {
     @Override
     public int compare(SyndEntry o1, SyndEntry o2) {
-      final Date publishedDate1 = o2.getPublishedDate();
-      return publishedDate1 != null ? publishedDate1.compareTo(o1.getPublishedDate()) : -1;
+      final Date date1 = o1.getPublishedDate();
+      final Date date2 = o2.getPublishedDate();
+
+      return date1 != null && date2 != null ? date2.compareTo(date1) : -1;
     }
   }
 }
