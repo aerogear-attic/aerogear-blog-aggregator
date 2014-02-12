@@ -11,7 +11,7 @@ import java.util.Map;
  * @author edewit
  */
 public class Feeds {
-  public static final String BLOGS_RESOURCE = "blogs.yml";
+  public static final String BLOGS_RESOURCE = "/blogs.yml";
   private String resourceName;
   private Yaml yaml = new Yaml();
 
