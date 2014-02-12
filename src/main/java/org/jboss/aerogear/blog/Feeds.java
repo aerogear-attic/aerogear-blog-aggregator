@@ -3,9 +3,9 @@ package org.jboss.aerogear.blog;
 import org.yaml.snakeyaml.Yaml;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author edewit
@@ -15,23 +15,24 @@ public class Feeds {
   private String resourceName;
   private Yaml yaml = new Yaml();
 
-  public Feeds() {}
+  public Feeds() {
+    resourceName = BLOGS_RESOURCE;
+  }
 
   protected Feeds(String resourceName) {
     this.resourceName = resourceName;
   }
 
   @SuppressWarnings("unchecked")
-  public List<URL> getFeeds() {
-    final String name = resourceName != null ? resourceName : "/" + BLOGS_RESOURCE;
-    List<String> urls = (List<String>) yaml.load(getClass().getResourceAsStream(name));
+  public List<Feed> getFeeds() {
+    List<Map> feeds = (List<Map>) yaml.load(getClass().getResourceAsStream(resourceName));
 
-    List<URL> result = new ArrayList<URL>();
-    for (String url : urls) {
+    List<Feed> result = new ArrayList<>();
+    for (Map<String, String> feed : feeds) {
       try {
-        result.add(new URL(url));
+        result.add(new Feed(feed.get("email"), feed.get("url")));
       } catch (MalformedURLException e) {
-        throw new RuntimeException("malformed url in yaml resource file " + name);
+        throw new RuntimeException("malformed url in yaml resource file " + resourceName);
       }
     }
 

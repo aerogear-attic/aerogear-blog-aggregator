@@ -34,7 +34,7 @@
       <category domain="http://www.blogger.com/atom/ns#">cordova</category>
       <category domain="http://www.blogger.com/atom/ns#">aerogear</category>
       <pubDate>Thu, 10 Oct 2013 13:39:00 GMT</pubDate>
-      <author>noreply@blogger.com</author>
+      <author>edewit@redhat.com</author>
       <guid isPermaLink="false">tag:blogger.com,1999:blog-236071318451058546.post-1126354836415376120</guid>
       <dc:creator>Erik Jan de Wit</dc:creator>
       <dc:date>2013-10-10T13:39:00Z</dc:date>
@@ -44,6 +44,7 @@
       <link>http://www.wikipedia.org/</link>
       <description>Here is some text containing an interesting description.</description>
       <pubDate>Sun, 06 Sep 2009 16:20:00 GMT</pubDate>
+      <author>test@test.com</author>
       <guid isPermaLink="false">unique string per item</guid>
       <dc:date>2009-09-06T16:20:00Z</dc:date>
     </item>

@@ -3,7 +3,7 @@ package org.jboss.aerogear.blog;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
-import java.net.URL;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,10 +34,10 @@ public class AggregatorTest {
     assertThat(feed, equalToIgnoringWhiteSpace(expectedString));
   }
 
-  private List<URL> getMockedList() {
-    List<URL> urls = new ArrayList<URL>();
-    urls.add(getClass().getResource("/blog2.xml"));
-    urls.add(getClass().getResource("/blog1.xml"));
+  private List<Feed> getMockedList() throws MalformedURLException {
+    List<Feed> urls = new ArrayList<>();
+    urls.add(new Feed("test@test.com", getClass().getResource("/blog2.xml").toString()));
+    urls.add(new Feed("edewit@redhat.com", getClass().getResource("/blog1.xml").toString()));
     return urls;
   }
 }

@@ -1,8 +1,6 @@
 package org.jboss.aerogear.blog;
 
-import com.sun.syndication.feed.synd.SyndEntry;
-import com.sun.syndication.feed.synd.SyndFeed;
-import com.sun.syndication.feed.synd.SyndFeedImpl;
+import com.sun.syndication.feed.synd.*;
 import com.sun.syndication.io.FeedException;
 import com.sun.syndication.io.SyndFeedInput;
 import com.sun.syndication.io.SyndFeedOutput;
@@ -10,7 +8,6 @@ import com.sun.syndication.io.XmlReader;
 
 import java.io.IOException;
 import java.io.StringWriter;
-import java.net.URL;
 import java.util.*;
 
 /**
@@ -26,32 +23,41 @@ public class Aggregator {
 
   @SuppressWarnings("unchecked")
   public String createFeed() throws IOException, FeedException {
-    SyndFeed feed = new SyndFeedImpl();
-    feed.setFeedType("rss_2.0");
+    SyndFeed syndFeed = new SyndFeedImpl();
+    syndFeed.setFeedType("rss_2.0");
 
-    feed.setTitle("Aggregated AeroGear Blogs");
-    feed.setDescription("Aggregated Feed of blogs dedicated to aerogear");
-    feed.setAuthor("aerogear");
-    feed.setLink("http://aerogear.org");
+    syndFeed.setTitle("Aggregated AeroGear Blogs");
+    syndFeed.setDescription("Aggregated Feed of blogs dedicated to aerogear");
+    syndFeed.setAuthor("aerogear");
+    syndFeed.setLink("http://aerogear.org");
 
-    List entries = new ArrayList();
+    List blogFeeds = new ArrayList();
 
-    for (URL url : feeds.getFeeds()) {
+    for (Feed feed : feeds.getFeeds()) {
       SyndFeedInput input = new SyndFeedInput();
-      SyndFeed inFeed = input.build(new XmlReader(url));
+      SyndFeed inFeed = input.build(new XmlReader(feed.getUrl()));
+      overrideAuthorEmail(feed, inFeed);
 
-      entries.addAll(inFeed.getEntries());
+      blogFeeds.addAll(inFeed.getEntries());
     }
 
-    SyndEntry[] entriesArray = (SyndEntry[]) entries.toArray(new SyndEntry[entries.size()]);
+    SyndEntry[] entriesArray = (SyndEntry[]) blogFeeds.toArray(new SyndEntry[blogFeeds.size()]);
     Arrays.sort(entriesArray, new OrderByDate());
-    feed.setEntries(Arrays.asList(entriesArray));
+    syndFeed.setEntries(Arrays.asList(entriesArray));
 
     SyndFeedOutput output = new SyndFeedOutput();
     final StringWriter writer = new StringWriter();
-    output.output(feed, writer);
+    output.output(syndFeed, writer);
 
     return writer.toString();
+  }
+
+  private void overrideAuthorEmail(Feed feed, SyndFeed inFeed) {
+    final SyndPerson author = new SyndPersonImpl();
+    author.setEmail(feed.getEmail());
+    for (Object entry : inFeed.getEntries()) {
+      ((SyndEntryImpl) entry).setAuthors(Arrays.asList(author));
+    }
   }
 
   private class OrderByDate implements Comparator<SyndEntry> {

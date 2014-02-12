@@ -1,4 +1,7 @@
-[
-  'http://blog.nerdin.ch/feeds/posts/default/-/aerogear', 
-  'http://myblog.com.com'
-]
+
+- url: 'http://blog.nerdin.ch/feeds/posts/default/-/aerogear'
+  email: edewit@redhat.com
+
+- url: 'http://myblog.com.com'
+  email: superman@krypton.com
+
