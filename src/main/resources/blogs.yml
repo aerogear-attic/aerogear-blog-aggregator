@@ -7,5 +7,6 @@
   'http://cvasilak.blogspot.ch/feeds/posts/default/-/aerogear',
   'http://blog.passos.me/feed-aerogear.xml',
   'http://blog.qmx.me/tag/aerogear.atom',
-  'http://blog.krisborchers.com/category/aerogear/feed/'
+  'http://blog.krisborchers.com/category/aerogear/feed/',
+  'http://blog-sblanc.rhcloud.com/?feed=rss2'
 ]
