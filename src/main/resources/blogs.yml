@@ -1,29 +1,29 @@
-- url: 'http://blog.nerdin.ch/feeds/posts/default/-/aerogear'
-  author: erikjan.dewit@gmail.com
+- url: http://blog.nerdin.ch/feeds/posts/default/-/aerogear
+  email: erikjan.dewit@gmail.com
 
-- url: 'http://matthiaswessendorf.wordpress.com/tag/aerogear/feed'
-  author: matzew@apache.org
+- url: http://matthiaswessendorf.wordpress.com/tag/aerogear/feed
+  email: matzew@apache.org
 
-- url: 'http://corinnekrych.blogspot.fr/feeds/posts/default/-/AeroGear'
-  author: corinnekrych@gmail.com
+- url: http://corinnekrych.blogspot.fr/feeds/posts/default/-/AeroGear
+  email: corinnekrych@gmail.com
 
-- url: http://feeds.feedburner.com/gorkem-ercan/aerogear'
-  author: gorkem.ercan@gmail.com
+- url: http://feeds.feedburner.com/gorkem-ercan/aerogear
+  email: gorkem.ercan@gmail.com
 
-- url: 'http://blog.sagaoftherealms.net/?cat=12&feed=rss2'
-  author: secondsun@gmail.com
+- url: http://blog.sagaoftherealms.net/?cat=12&feed=rss2
+  email: secondsun@gmail.com
 
-- url: 'http://cvasilak.blogspot.ch/feeds/posts/default/-/aerogear'
-  author: cvasilak@gmail.com
+- url: http://cvasilak.blogspot.ch/feeds/posts/default/-/aerogear
+  email: cvasilak@gmail.com
 
-- url: 'http://blog.passos.me/feed-aerogear.xml'
-  author: daniel@passos.me
+- url: http://blog.passos.me/feed-aerogear.xml
+  email: daniel@passos.me
 
-- url: 'http://blog.qmx.me/tag/aerogear.atom'
-  author: qmx@qmx.me
+- url: http://blog.qmx.me/tag/aerogear.atom
+  email: qmx@qmx.me
 
-- url: 'http://blog.krisborchers.com/category/aerogear/feed/'
-  author: kris.borchers@gmail.com
+- url: http://blog.krisborchers.com/category/aerogear/feed/
+  email: kris.borchers@gmail.com
 
-- url: 'http://blog-sblanc.rhcloud.com/?feed=rss2'
-  author: sblanc@redhat.com
+- url: http://blog-sblanc.rhcloud.com/?feed=rss2
+  email: sblanc@redhat.com
