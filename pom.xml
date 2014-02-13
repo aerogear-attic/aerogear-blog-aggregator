@@ -9,6 +9,11 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <skip.integration.tests>true</skip.integration.tests>
+  </properties>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -117,6 +122,20 @@
       <version>1.6.4</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- arquillian dependencies -->
+    <dependency>
+      <groupId>org.jboss.arquillian.container</groupId>
+      <artifactId>arquillian-glassfish-embedded-3.1</artifactId>
+      <version>1.0.0.CR3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.main.extras</groupId>
+      <artifactId>glassfish-embedded-all</artifactId>
+      <version>3.1.2</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
   <build>
     <finalName>${project.name}</finalName>
@@ -129,33 +148,29 @@
         </configuration>
       </plugin>
       <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.16</version>
-        <configuration>
-          <excludes>
-            <exclude>**/IntegrationTest.java</exclude>
-          </excludes>
-        </configuration>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.12</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+            <configuration>
+              <skipTests>${skip.integration.tests}</skipTests>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
   <profiles>
     <profile>
-      <id>glassfish-embedded</id>
-      <dependencies>
-        <dependency>
-          <groupId>org.jboss.arquillian.container</groupId>
-          <artifactId>arquillian-glassfish-embedded-3.1</artifactId>
-          <version>1.0.0.CR3</version>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.glassfish.main.extras</groupId>
-          <artifactId>glassfish-embedded-all</artifactId>
-          <version>3.1.2</version>
-          <scope>provided</scope>
-        </dependency>
-      </dependencies>
+      <id>integration-test</id>
+      <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <skip.integration.tests>false</skip.integration.tests>
+      </properties>
     </profile>
   </profiles>
 </project>

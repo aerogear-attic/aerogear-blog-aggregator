@@ -21,7 +21,7 @@ import static org.hamcrest.Matchers.startsWith;
  * @author edewit
  */
 @RunWith(Arquillian.class)
-public class IntegrationTest {
+public class ArquillianIT {
 
   @Deployment
   public static WebArchive createDeployment() {
