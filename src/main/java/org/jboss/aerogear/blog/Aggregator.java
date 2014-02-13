@@ -14,7 +14,7 @@ import java.util.*;
  * @author edewit@redhat.com
  */
 public class Aggregator {
-
+  private static final int MAX_FEEDS = 4;
   private final Feeds feeds;
 
   public Aggregator(Feeds feeds) {
@@ -38,7 +38,8 @@ public class Aggregator {
       SyndFeed inFeed = input.build(new XmlReader(feed.getUrl()));
       overrideAuthorEmail(feed, inFeed);
 
-      blogFeeds.addAll(inFeed.getEntries());
+      final List entries = inFeed.getEntries();
+      blogFeeds.addAll(entries.subList(0, Math.min(entries.size(), MAX_FEEDS)));
     }
 
     SyndEntry[] entriesArray = (SyndEntry[]) blogFeeds.toArray(new SyndEntry[blogFeeds.size()]);
