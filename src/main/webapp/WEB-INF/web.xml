@@ -11,7 +11,7 @@
         using credentials.
       </description>
       <param-name>cors.allowed.origins</param-name>
-      <param-value>http://localhost:4000,http://localhost:8888,http://aerogear.org,http://staging.aerogear.org</param-value>
+      <param-value>http://localhost:4000,http://localhost:8888,http://aerogear.org,http://staging.aerogear.org,http://aerogear-edewit.rhcloud.com</param-value>
     </init-param>
     <init-param>
       <description>A comma separated list of HTTP verbs, using which a CORS request can be made.</description>
