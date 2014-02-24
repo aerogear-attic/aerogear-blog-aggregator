@@ -26,4 +26,7 @@
   email: kris.borchers@gmail.com
 
 - url: http://blog-sblanc.rhcloud.com/?feed=rss2
-  email: sblanc@redhat.com
+  email: scm.blanc@gmail.com
+
+- url: http://blog.abstractj.org/aerogear.xml
+  email: bruno@abstractj.org
