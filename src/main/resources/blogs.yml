@@ -10,13 +10,13 @@
 - url: http://feeds.feedburner.com/gorkem-ercan/aerogear
   email: gorkem.ercan@gmail.com
 
-- url: http://blog.sagaoftherealms.net/?cat=12&feed=rss2
+- url: https://blog.sagaoftherealms.net/?cat=12&feed=rss2
   email: secondsun@gmail.com
 
 - url: http://cvasilak.blogspot.ch/feeds/posts/default/-/aerogear
   email: cvasilak@gmail.com
 
-- url: http://blog.passos.me/feed-aerogear.xml
+- url: http://blog.passos.me/tag/aerogear/rss/
   email: daniel@passos.me
 
 - url: http://blog.qmx.me/tag/aerogear.atom
@@ -30,3 +30,6 @@
 
 - url: http://blog.abstractj.org/aerogear.xml
   email: bruno@abstractj.org
+
+- url: http://blog.lholmquist.org/rss/
+  email: lholmqui@redhat.com
