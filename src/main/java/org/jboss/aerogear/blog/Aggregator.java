@@ -34,12 +34,16 @@ public class Aggregator {
     List blogFeeds = new ArrayList();
 
     for (Feed feed : feeds.getFeeds()) {
-      SyndFeedInput input = new SyndFeedInput();
-      SyndFeed inFeed = input.build(new XmlReader(feed.getUrl()));
-      overrideAuthorEmail(feed, inFeed);
+      try {
+        SyndFeedInput input = new SyndFeedInput();
+        SyndFeed inFeed = input.build(new XmlReader(feed.getUrl()));
+        overrideAuthorEmail(feed, inFeed);
 
-      final List entries = inFeed.getEntries();
-      blogFeeds.addAll(entries.subList(0, Math.min(entries.size(), MAX_FEEDS)));
+        final List entries = inFeed.getEntries();
+        blogFeeds.addAll(entries.subList(0, Math.min(entries.size(), MAX_FEEDS)));
+      } catch (IOException ioe) {
+        System.err.println(String.format("Error: could not aggregate feed '%s'", feed.getUrl()));
+      }
     }
 
     SyndEntry[] entriesArray = (SyndEntry[]) blogFeeds.toArray(new SyndEntry[blogFeeds.size()]);
