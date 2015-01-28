@@ -16,7 +16,7 @@
 - url: http://cvasilak.blogspot.ch/feeds/posts/default/-/aerogear
   email: cvasilak@gmail.com
 
-- url: http://blog.passos.me/tag/aerogear/rss/
+- url: http://blog.passos.me/aerogear.xml
   email: daniel@passos.me
 
 - url: http://blog.qmx.me/tag/aerogear.atom
