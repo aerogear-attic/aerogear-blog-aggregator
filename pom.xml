@@ -33,14 +33,6 @@
     </dependencies>
   </dependencyManagement>
 
-  <repositories>
-    <repository>
-      <id>Sonatype-public</id>
-      <name>SnakeYAML repository</name>
-      <url>http://oss.sonatype.org/content/groups/public/</url>
-    </repository>
-  </repositories>
-
   <dependencies>
     <dependency>
       <groupId>rome</groupId>
@@ -56,7 +48,7 @@
     <dependency>
       <groupId>org.yaml</groupId>
       <artifactId>snakeyaml</artifactId>
-      <version>1.14-SNAPSHOT</version>
+      <version>1.14</version>
     </dependency>
     <dependency>
       <groupId>org.ebaysf.web</groupId>
